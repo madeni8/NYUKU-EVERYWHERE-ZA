@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nyuku Everywhere — Urban Streetwear | Home</title>
+  <meta name="description" content="Nyuku Everywhere — South African inspired streetwear. Shop tees, hoodies, caps and more.">
+  <meta name="keywords" content="Nyuku, streetwear, fashion, Tshirt, hoodie, cap, South Africa">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="index-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo-link"><img src="../assests/nyuku-400.png" alt="Nyuku Everywhere logo" class="logo"></a>
+        <h1 class="sr-only">Nyuku Everywhere</h1>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span class="icon"><span class="i i-1"></span><span class="i i-2"></span><span class="i i-3"></span></span></button>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link" href="enquiry.html">Enquiry</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container"> <section class="hero hero-grid"> <div> <h1>Welcome to Nyuku Everywhere</h1> <p>High-quality urban streetwear inspired by South African culture. Sign up for exclusive drops.</p> <a class="cta" href="products.html">Browse Collections</a> <div style="margin-top:1rem" class="ticker"><div class="item">Live: <span id="liveTicker">Loading live updates...</span></div></div> </div> <div><img src="../assests/banner.jpg" alt="Nyuku banner" class="banner-img"></div> </section> <section class="registration-banner"> <div class="registration"> <h2>Sign IN or Up For Exclusive Releases</h2> <form class="signup-form"> <label for="fullname">Full Name</label> <input id="fullname" name="fullname" type="text" required> <label for="email">Email</label> <input id="email" name="email" type="email" required> <label for="interest">Interested in</label> <select id="interest" name="interest"> <option value="mens">Men's Fashion</option> <option value="womens">Women's Fashion</option> <option value="accessories">Accessories</option> <option value="all">All</option> </select> <button type="submit" class="btn">Register</button> </form> </div> <div class="banner"><img src="../assests/banner.jpg" alt="Nyuku banner small" class="banner-img"></div> </section> </main>
+
+  <footer>
+    <p>Follow Us:</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 Nyuku Everywhere. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Modals -->
+  <div id="productModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div>
+        <img src="../assests/banner.jpg" alt="product" style="width:100%;border-radius:8px">
+      </div>
+      <div>
+        <h3>Product Quick View</h3>
+        <p class="product-meta">Price: R300</p>
+        <p>Short description — premium cotton street tee.</p>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="lightbox" role="dialog" aria-hidden="true"></div>
+
+  <script src="../js/nav.js" defer></script>
+  <script src="../js/register.js" defer></script>
+  <script src="../js/realtime.js" defer></script>
+  <script src="../js/ui.js" defer></script>
+  <script src="../js/lightbox.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+
+  <script>
+    // Redirect if user already saved previously
+    const savedName = localStorage.getItem("nyuku_fullName");
+    const savedEmail = localStorage.getItem("nyuku_email");
+
+    if (savedName && savedEmail) {
+        // User exists → go straight to products page
+        window.location.href = "products.html";
+    }
+
+    // Save new user on form submit
+    document.querySelector("form").addEventListener("submit", function (e) {
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        // save to localStorage
+        localStorage.setItem("nyuku_fullName", fullName);
+        localStorage.setItem("nyuku_email", email);
+    });
+</script>
+
+
+</body>
+</html>

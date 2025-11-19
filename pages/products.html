@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Products - Nyuku Everywhere | Shop</title>
+  <meta name="description" content="Nyuku product catalog: Tees, hoodies, caps, jackets.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="products-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="../assests/nyuku.png" alt="Nyuku logo" class="logo"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span class="icon"><span class="i i-1"></span><span class="i i-2"></span><span class="i i-3"></span></span></button>
+      <nav class="primary-nav"><ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="enquiry.html" class="nav-link">Enquiry</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Our Products</h1>
+
+    <div style="margin:1rem 0;display:flex;gap:.5rem;align-items:center">
+      <input id="siteSearch" class="search-input" type="search" placeholder="Search products...">
+      <div style="margin-left:auto">Sort: <button data-tab data-group="cat" data-target="all" class="tab active">All</button> <button data-tab data-group="cat" data-target="men" class="tab">Men</button> <button data-tab data-group="cat" data-target="women" class="tab">Women</button></div>
+    </div>
+
+    <div class="products-container" id="productsGrid">
+      <div class="product-item" data-cat="men">
+        <h3>Streetwear T-Shirt</h3><p class="product-meta">Price: R300</p>
+        <img src="../assests/T-SHIRT.png" alt="Urban Hoodie" class="product-img"></a>
+      
+      </div>
+      <div class="product-item" data-cat="men">
+        <h3>Urban Hoodie</h3><p class="product-meta">Price: R500</p>
+        <a class="lightbox-trigger" href="../assests/Hoodie.png" data-src="/assests/Hoodie.png"><img src="../assests/Hoodie.png" alt="Urban Hoodie" class="product-img"></a>
+      </div>
+      <div class="product-item" data-cat="accessories">
+        <h3>Snapback Cap</h3><p class="product-meta">Price: R200</p>
+        <a class="lightbox-trigger" href="../assests/cap.png" data-src="assets/cap.png"><img src="../assests/cap.png" alt="Snapback Cap" class="product-img"></a>
+      </div>
+      <div class="product-item" data-cat="men">
+        <h3>Denim Jacket</h3><p class="product-meta">Price: R700</p>
+        <a class="lightbox-trigger" href="../assests/jackal.png" data-src="assests/jackal.png"><img src="../assests/jackal.png" alt="Denim Jacket" class="product-img"></a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer><p>&copy; 2025 Nyuku Everywhere</p></footer>
+
+  <div class="lightbox" role="dialog" aria-hidden="true"></div>
+  <div id="productModal" class="modal" aria-hidden="true"><div class="modal-content"><button class="modal-close">×</button><div><img src="" alt="" style="width:100%"></div><div class="modal-info"><h3></h3><p class="product-meta"></p></div></div></div>
+
+  <script src="../js/nav.js" defer></script>
+  <script src="../js/search.js" defer></script>
+  <script src="../js/ui.js" defer></script>
+  <script src="../js/lightbox.js" defer></script>
+</body>
+</html>
+
+

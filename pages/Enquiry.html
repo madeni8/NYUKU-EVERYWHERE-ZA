@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enquiry - Nyuku Everywhere</title>
+<meta name="description" content="Send an enquiry to Nyuku Everywhere.">
+<link rel="stylesheet" href="../css/style.css"></head>
+<body class="enquiry-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="../assests/nyuku.png" alt="Nyuku logo" class="logo"></a>
+      <button class="nav-toggle" aria-expanded="false"><span class="icon"><span class="i i-1"></span><span class="i i-2"></span><span class="i i-3"></span></span></button>
+      <nav class="primary-nav"><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="enquiry.html" class="nav-link active">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Send Us an Enquiry</h1>
+    <p>Fill out the short form and we'll get back to you.</p>
+
+    <section class="registration-banner">
+      <div class="registration">
+        <form class="signup-form">
+          <label for="e-name">Full name</label><input id="e-name" name="name" type="text" required>
+          <label for="e-email">Email</label><input id="e-email" name="email" type="email" required>
+          <label for="e-interest">Interested in</label><select id="e-interest" name="interest"><option>Mens</option><option>Womens</option><option>Accessories</option></select>
+          <label for="e-message">Message</label><textarea id="e-message" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn">Send Enquiry</button>
+        </form>
+      </div>
+      <div class="banner"><img src = "../assests/banner.jpg" alt="Enquiry banner" class="banner-img"></div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 Nyuku Everywhere</p></footer>
+
+  <script src="../js/nav.js" defer></script>
+  <script src="../js/register.js" defer></script>
+</body>
+</html>
